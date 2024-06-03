@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AspirGo Status Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .sidebar {
+            background-color: #387ADF;
+            color: rgb(0, 0, 0);
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            overflow-y: auto;
+            z-index: 0;
+        }
+
+        .logo-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 180px; /* Increased width */
+            height: auto;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin: 20px 0;
+            background-color: #D3DEEF;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .profile .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .user-info {
+            margin-left: 10px;
+            color: #000000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        nav ul li a:hover, 
+        nav ul li a.active {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .logout-btn {
+            background-color: #D3DEEF;
+            color: #000000;
+            border: none;
+            padding: 10px;
+            margin-top: auto;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logout-btn img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .logout-btn:hover {
+            background-color: #D3DEEF;
+        }
+        .main-container {
+            margin-left: 210px; /* Sidebar width + its padding */
+            padding: 10px;
+        }
+        .status-box {
+            height: 150px;
+            width: 500px;
+            padding: 20px;
+            margin-bottom: 10px;
+            color: white;
+            border-radius: 5px;
+            margin: 15px;
+            
+        }
+
+        .status-box h1{
+            font-size: 45px;
+        }
+
+        .yellow {
+            background-color: #EBD515;
+        }
+        .green {
+            background-color: #6EE014;
+        }
+        .red {
+            background-color: #FF3535;
+        }
+        .status-icon {
+            float: right;
+            font-size: 24px;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="logo aspira.jpg" class="logo" alt="AspiRa Logo">
+            </div>
+            <div class="profile">
+                <img src="ikon_profil.png" class="icon" alt="Profile Icon">
+                <div class="user-info">
+                    <p>Nama User</p>
+                    <p>NIP</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="beranda active"><img src="ikon_beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="#" class="buat-pengaduan"><img src="ikon_buat_pengaduan.png" alt="Buat Pengaduan Icon"> Buat Pengaduan</a></li>
+                    <li><a href="#" class="status-pengaduan"><img src="ikon_status_pengaduan.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                </ul>
+            </nav>
+            <button class="logout-btn"><img src="ikon_logout.png" alt="Logout Icon"> Logout</button>
+        </aside>
+        <div class="main-content">
+            <div class="status-box yellow">
+                <h1>Diproses</h1>
+                <span class="status-icon">⌛</span>
+            </div>
+            <div class="status-box green">
+                <h1>Diterima</h1>
+                <span class="status-icon">✔</span>
+            </div>
+            <div class="status-box red">
+                <h1>Ditolak</h1>
+                <span class="status-icon">✖</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
