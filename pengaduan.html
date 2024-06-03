@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AspiRa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="logo aspira.jpg" class="logo" alt="AspiRa Logo">
+            </div>
+            <div class="profile">
+                <img src="ikon_profil.png" class="icon" alt="Profile Icon">
+                <div class="user-info">
+                    <p>Nama User</p>
+                    <p>NIP</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="beranda"><img src="ikon_beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="#" class="buat-pengaduan active"><img src="ikon_buat_pengaduan.png" alt="Buat Pengaduan Icon"> Buat Pengaduan</a></li>
+                    <li><a href="#" class="status-pengaduan"><img src="ikon_status_pengaduan.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                </ul>
+            </nav>
+            <button class="logout-btn"><img src="ikon_logout.png" alt="Logout Icon"> Logout</button>
+        </aside>
+        <main class="main-content">
+            <div class="content-header">
+                <h1>Buat Pengaduan</h1>
+            </div>
+            <div class="form-container">
+                <form>
+                    <label for="jenis-pengaduan">Pilih Jenis Pengaduan</label>
+                    <select id="jenis-pengaduan">
+                        <option value="" disabled selected>Pilih Jenis Pengaduan</option>
+                        <!-- Add options here -->
+                    </select>
+
+                    <label for="isi-laporan">Ketik Isi Laporan Anda</label>
+                    <textarea id="isi-laporan"></textarea>
+
+                    <label for="wilayah">Pilih Wilayah</label>
+                    <select id="wilayah">
+                        <option value="" disabled selected>Pilih Wilayah</option>
+                        <!-- Add options here -->
+                    </select>
+
+                    <label for="tanggal-kejadian">Pilih Tanggal Kejadian</label>
+                    <input type="date" id="tanggal-kejadian">
+
+                    <label for="lokasi-kejadian">Ketik Lokasi Kejadian</label>
+                    <input type="text" id="lokasi-kejadian">
+
+                    <label for="upload-dokumentasi">Upload Dokumentasi</label>
+                    <input type="file" id="upload-dokumentasi">
+
+                    <div class="form-buttons">
+                        <button type="reset">Kosongkan</button>
+                        <button type="submit">Kirim</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
