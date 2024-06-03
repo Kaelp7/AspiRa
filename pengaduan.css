@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #387ADF;
+    color: rgb(0, 0, 0);
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 0;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 180px; /* Increased width */
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 20px 0;
+    background-color: #D3DEEF;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.profile .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-info {
+    margin-left: 10px;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #ffffff;
+    width: 100%; /* Latar belakang menjadi putih */
+    color: #000000; /* Warna teks menjadi hitam */
+
+}
+
+.logout-btn {
+    background-color: #D3DEEF;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    margin-top: auto;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #D3DEEF;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-left: 250px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.content-header {
+    background-color: #387ADF;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    overflow-y: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.form-buttons button[type="reset"] {
+    background-color: #ffc107;
+    color: white;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
