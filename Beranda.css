@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #387ADF;
+    color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar .header {
+    text-align: center;
+    position: relative;
+}
+
+.cloud {
+    background: #fff;
+    width: 50px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 25px);
+}
+
+.sun {
+    background: yellow;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    right: -30px;
+}
+
+.sun-ray {
+    background: yellow;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    box-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 15px yellow;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile .icon {
+    font-size: 50px;
+}
+
+.user-info {
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #387ADF;
+}
+
+.logout-btn {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 10px;
+    margin-top: auto;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #d9e7ff;
+}
+
+header {
+    background-color: #387ADF;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.complaints {
+    margin-top: 20px;
+}
+
+.complaints table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.complaints table th, .complaints table td {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.complaints table th {
+    background-color: #fff;
+    color: black;
+    font-style: bold;
+}
+
+.detail-btn, .doc-btn {
+    background-color: #387ADF;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+
+.status-btn-diproses {
+    background-color: yellow;
+    border-radius: 3px;
+    border: none;
+
+
+}
+
+.status-btn-diterima {
+    background-color: lime;
+    border-radius: 3px;
+    border: none;
+
+}
+
+.status-btn-ditolak {
+    background-color: red;
+    border-radius: 3px;
+    border: none;
+
+}

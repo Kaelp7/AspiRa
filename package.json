@@ -1,0 +1,17 @@
+{
+  "name": "pengaduan",
+  "productName": "Aplikasi Pengaduan Masyarakat",
+  "version": "1.0.0",
+  "description": "Aplikasi Pengaduan",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Kelompok 1",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^30.0.9",
+    "resize-img": "^2.0.0",
+    "toastify-js": "^1.12.0"
+  }
+}
