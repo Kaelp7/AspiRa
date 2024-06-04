@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: poppins;
+    font-family: 'poppins';
     background-color: #D3DEEF;
 }
 
@@ -53,9 +53,19 @@ body {
     height: 70px;
 }
 
+.profile:hover {
+    background-color: #c0c8e0; /* Background color on hover */
+}
+
 .profile .icon {
     height: 50px;
     border-radius: 50%;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Sesuaikan lebar sesuai kebutuhan */
 }
 
 .user-info {
@@ -114,8 +124,8 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    font-weight: 800;
-    font-size: small;
+    font-weight:bolder;
+    font-size: medium;
     text-decoration: none; /* Menghilangkan garis bawah di tombol logout */
 }
 
