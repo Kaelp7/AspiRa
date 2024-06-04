@@ -55,6 +55,10 @@ body {
     height: 70px;
 }
 
+.profile:hover {
+    background-color: #c0c8e0; /* Background color on hover */
+}
+
 .profile .icon {
     height: 50px;
     border-radius: 50%;
