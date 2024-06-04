@@ -1,0 +1,203 @@
+body {
+    font-family: 'poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #D3DEEF;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #387ADF;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #D3DEEF;
+    padding: 14px;
+    border-radius: 5px;
+    width: calc(100% - 8px);
+    height: 70px;
+}
+
+.profile .icon {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-info {
+    margin-left: 10px;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000000;
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000000;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background-color: #D3DEEF;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    margin-top: auto;
+    cursor: pointer;
+    width: calc(100% - 40px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    font-weight: bolder;
+    font-size: medium;
+    text-decoration: none;
+}
+
+.logout-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #c0c8e0;
+}
+
+.main-content {
+    margin-left: 240px; /* Sidebar width + padding */
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Prevent vertical scrolling */
+}
+
+.content-header {
+    background-color: #387ADF;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 15px;
+    width: 94%;
+    box-sizing: border-box;
+}
+
+.status-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 94%;
+    max-width: 950px; /* Adjusted max width */
+    min-height: 420px; /* Added minimum height */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the boxes */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+.status-box {
+    height: 300px; /* Increased height */
+    padding: 20px; /* Adjusted padding */
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 900px; /* Increased max width */
+    margin-bottom: 15px; /* Adjusted margin */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.yellow {
+    background-color: #FFD700; /* Adjusted to match the yellow color in the screenshot */
+}
+
+.green {
+    background-color: #32CD32; /* Adjusted to match the green color in the screenshot */
+}
+
+.red {
+    background-color: #ff0000; /* Adjusted to match the red color in the screenshot */
+}
+
+.status-icon {
+    font-size: 40px; /* Adjusted icon size */
+}
+
+.status-box h1 {
+    font-size: 30px;
+    margin: 0;
+}
