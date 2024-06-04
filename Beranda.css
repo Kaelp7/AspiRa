@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'poppins';
     background-color: #f0f0f0;
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
@@ -123,9 +123,9 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    font-weight: 800;
-    font-size: small;
-    text-decoration: none; /* Menghilangkan garis bawah di tombol logout */
+    font-weight: bolder;
+    font-size: medium;
+    text-decoration: none;
 }
 
 .logout-btn img {
@@ -136,7 +136,6 @@ nav ul li a.active {
 
 .logout-btn:hover {
     background-color: #c0c8e0;
-    text-decoration: none; /* Menghapus garis bawah pada hover */
 }
 
 header {
