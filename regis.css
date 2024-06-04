@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body, input, button, select, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #387ADF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-box h1 {
+  margin-bottom: 20px;
+  color: #1e5bb5;
+  font-size: 1.2rem; /* Adjusted to a smaller size */
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box .input-container {
+  margin-bottom: 15px;
+}
+
+.form-box .input-container input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #D0DCE6;
+  color: black;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-box .input-container input::placeholder {
+  color: #666; /* Placeholder color */
+  font-size: 14px; /* Adjust font size */
+  line-height: 1.5; /* Adjust line height */
+  padding-top: 2px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.form-box button:hover {
+  background-color: #0062cc;
+}
+
+.form-box p {
+  margin-top: 10px;
+  color: black;
+}
+
+.form-box a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-box a:hover {
+  color: #0062cc;
+}
+
+.input-container input::placeholder {
+  font-style: italic;
+  color: #000;
+}
+
+.form-box .input-container label {
+  font-weight: '\f032';
+  display: block; /* Set display to block to stack vertically */
+    margin-bottom: 1px; /* Menambahkan jarak antara teks label dan placeholder */
+  }
+  

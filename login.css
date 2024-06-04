@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body, input, button, select, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #387ADF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#logo {
+  width: 290px;
+  height: auto;
+}
+
+.container {
+  width: 320px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  color: #093F68;
+  font-size: 1.2rem; /* Adjusted to a smaller size */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-container i.icon {
+  padding: 15px; /* Adjust padding to center icon vertically */
+  background: #D0DCE6;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  font-size: 14px; /* Adjust font size */
+  line-height: 1.5; /* Adjust line height */
+  height: 40px; /* Set a fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 15px 10px; /* Adjusted padding to affect height */
+  outline: none;
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #D0DCE6;
+  color: black;
+  font-size: 14px; /* Adjust font size */
+  line-height: 1.5; /* Adjust line height */
+  height: 40px; /* Set a fixed height to match the icon container */
+}
+
+.input-container input::placeholder {
+  color: #666; /* Placeholder color */
+  font-size: 14px; /* Adjust font size */
+  line-height: 1.5; /* Adjust line height */
+  font-style: italic;
+  }
+
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0062cc;
+}
+
+p {
+  margin-top: 10px;
+  color: black;
+}
+
+#register-link {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#register-link:hover {
+  color: #0062cc;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buat Akun</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="regis.css">
+  <style>
+    label {
+      font-weight: bold;
+      display: inline-block;
+      width: 120px; /* Menentukan lebar maksimum label */
+      text-align: left;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: calc(100% - 120px); /* Menghitung lebar input */
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h1>Buat Akun</h1>
+      <form>
+        <div class="input-container">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" placeholder="Masukkan Nama Lengkap">
+        </div>
+        <div class="input-container">
+          <label for="nip">NIP</label>
+          <input type="text" id="nip" placeholder="Masukkan NIP">
+        </div>
+        <div class="input-container">
+          <label for="wilayah">Wilayah</label>
+          <input type="text" id="wilayah" placeholder="Masukkan Wilayah">
+        </div>
+        <div class="input-container">
+          <label for="hp">No HP</label>
+          <input type="text" id="hp" placeholder="Masukkan No HP">
+        </div>
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Masukkan Password">
+        </div>
+        <button type="submit">Daftar</button>
+      </form>
+      <p>Sudah punya akun? <a href="index.html">Login</a></p>
+    </div>
+  </div>
+</body>
+</html>
