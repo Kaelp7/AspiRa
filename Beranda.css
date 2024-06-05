@@ -1,15 +1,12 @@
+/* General Styles */
 body {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'poppins';
-    background-color: #f0f0f0;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    font-family: 'poppins', sans-serif;
+    background-color: #D3DEEF;
 }
 
 .container {
     display: flex;
-    height: 100vh; /* Ensure the container fills the full height of the viewport */
 }
 
 .sidebar {
@@ -19,18 +16,12 @@ body {
     flex-direction: column;
     align-items: self-start;
     padding: 20px;
-    width: 220px;
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
 }
-
-.main-content {
-    padding: 20px;
-    flex-grow: 1;
-    background-color: #d9e7ff;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    min-width: calc(100% - 300px); /* Ensure minimum width for the content */
-}
-
 
 .logo-container {
     width: 100%;
@@ -60,6 +51,8 @@ body {
     border-radius: 5px;
     width: calc(100% - 8px);
     height: 70px;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-weight: bold; /* Make text bold */
 }
 
 .profile:hover {
@@ -94,7 +87,8 @@ nav ul li a {
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-weight: bold;
+    font-weight: bold; /* Ensure links are bold */
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 nav ul li a img {
@@ -130,6 +124,7 @@ nav ul li a.active {
     font-weight: bolder;
     font-size: medium;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 .logout-btn img {
@@ -140,58 +135,105 @@ nav ul li a.active {
 
 .logout-btn:hover {
     background-color: #c0c8e0;
+    text-decoration: none; /* Remove underline on hover */
 }
 
-header {
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D3DEEF;
+}
+
+.content-header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.content-header h2 {
+    color: #093F68;
+    text-align: left;
+}
+
+.content-header p {
+    color: #333;
+}
+
+.complaints {
+    width: calc(100% - 30px); /* Mengurangi 30px dari lebar untuk mengakomodasi margin */
+    max-width: 1000px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0% auto; /* Mengurangi margin atas dan bawah */
+}
+
+.complaints h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: -10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    width: calc(100% / 7); /* Adjusted to 1/7th of the total width */
+    margin-left: 4px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detail-btn {
+    background-color: #007BFF;
+    color: white;
+}
+
+.doc-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-btn-diproses {
+    background-color: #ffc107;
+    color: white;
+}
+
+.status-btn-diterima {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-btn-ditolak {
+    background-color: #dc3545;
+    color: white;
+}
+
+.paragraph-box {
     background-color: #387ADF;
     color: white;
     padding: 20px;
     border-radius: 10px;
-}
-
-.complaints {
-    margin-top: 20px;
-}
-
-.complaints table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.complaints table th, .complaints table td {
-    border: 1px solid #fff;
-    padding: 10px;
-    text-align: left;
-    background-color: #fff;
-}
-
-.complaints table th {
-    background-color: #fff;
-    color: black;
-    font-style: bold;
-}
-
-.detail-btn, .doc-btn {
-    background-color: #387ADF;
-    color: white;
-    border-radius: 3px;
-    border: none;
-}
-
-.status-btn-diproses {
-    background-color: yellow;
-    border-radius: 3px;
-    border: none;
-}
-
-.status-btn-diterima {
-    background-color: lime;
-    border-radius: 3px;
-    border: none;
-}
-
-.status-btn-ditolak {
-    background-color: red;
-    border-radius: 3px;
-    border: none;
+    text-align: center;
+    margin-bottom: 15px; /* Mengurangi margin bawah */
+    overflow-y: auto;
 }
