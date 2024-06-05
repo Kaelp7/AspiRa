@@ -1,14 +1,12 @@
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
     background-color: #D3DEEF;
 }
 
 .container {
     display: flex;
-    height: 100vh;
 }
 
 .sidebar {
@@ -55,10 +53,6 @@ body {
     height: 70px;
 }
 
-.profile:hover {
-    background-color: #c0c8e0; /* Background color on hover */
-}
-
 .profile .icon {
     height: 50px;
     border-radius: 50%;
@@ -88,7 +82,6 @@ nav ul li a {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 nav ul li a img {
@@ -121,10 +114,9 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    font-weight: bolder;
-    font-size: medium;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-weight: 800;
+    font-size: small;
+    text-decoration: none; /* Menghilangkan garis bawah di tombol logout */
 }
 
 .logout-btn img {
@@ -135,90 +127,105 @@ nav ul li a.active {
 
 .logout-btn:hover {
     background-color: #c0c8e0;
+    text-decoration: none; /* Menghapus garis bawah pada hover */
 }
 
 .main-content {
-    margin-left: 240px; /* Sidebar width + padding */
+    margin-left: 250px;
     padding: 20px;
-    flex: 1;
+    width: calc(100% - 250px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden; /* Prevent vertical scrolling */
-}
-
-.content-header, .status-container {
-    width: 94%;
-    max-width: 1000px; /* Adjusted max width */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    margin: 0 auto; /* Center the elements */
+    background-color: #D3DEEF;
 }
 
 .content-header {
-    background-color: #387ADF;
-    border-radius: 10px;
-    color: white;
     text-align: center;
-    font-weight: bold;
-    margin-bottom: 15px;
-    padding: 20px; /* Add padding if necessary */
-    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-.status-container {
+.content-header h2 {
+    color: #093F68;
+    text-align: left;
+}
+
+.content-header p {
+    color: #333;
+}
+
+.complaints {
+    width: calc(100% - 30px); /* Mengurangi 30px dari lebar untuk mengakomodasi margin */
+    max-width: 1000px;
     background-color: white;
-    border-radius: 10px;
     padding: 20px;
-    min-height: 420px; /* Added minimum height */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the buttons */
-    gap: 5px; /* Reduced gap between buttons */
-}
-
-.status-box {
-    display: flex;
-    justify-content: space-between; /* Space between the text and the icon */
-    align-items: center;
-    border: none;
-    padding: 20px;
-    margin: 5px 0; /* Reduced vertical margin for the buttons */
     border-radius: 10px;
+    margin: 0% auto; /* Mengurangi margin atas dan bawah */
+}
+
+.complaints h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: -10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    width: calc(100% / 7); /* Adjusted to 1/7th of the total width */
+    margin-left: 4px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    text-align: left; /* Align text to the left */
-    transition: background-color 0.3s ease;
-    width: 94%; /* Adjusted width for the buttons */
-    max-width: 950px; /* Adjusted max width */
-    min-height: 100px; /* Added minimum height */
-    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
-.status-box h1 {
-    color: white; /* Set text color to white */
-    font-size: 15px;
-    margin: 0;
-    flex: 1; /* Allow h1 to take remaining space */
+.detail-btn {
+    background-color: #007BFF;
+    color: white;
 }
 
-.status-box .status-icon {
-    font-size: 2em;
-    color: white; /* Set icon color to white */
-    margin-left: 10px; /* Add some space between text and icon */
+.doc-btn {
+    background-color: #28a745;
+    color: white;
 }
 
-.status-box.yellow {
-    background-color: #EBD515;
+.status-btn-diproses {
+    background-color: #ffc107;
+    color: white;
 }
 
-.status-box.green {
-    background-color: #6EE014;
+.status-btn-diterima {
+    background-color: #28a745;
+    color: white;
 }
 
-.status-box.red {
-    background-color: #FF3535;
+.status-btn-ditolak {
+    background-color: #dc3545;
+    color: white;
 }
 
-.status-box:hover {
-    opacity: 0.8;
+.paragraph-box {
+    background-color: #387ADF;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px; /* Mengurangi margin bawah */
+    overflow-y: auto;
 }

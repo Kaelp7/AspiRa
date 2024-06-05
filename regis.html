@@ -25,7 +25,7 @@
   <div class="container">
     <div class="form-box">
       <h1>Buat Akun</h1>
-      <form>
+      <form id="registrationForm">
         <div class="input-container">
           <label for="nama">Nama</label>
           <input type="text" id="nama" placeholder="Masukkan Nama Lengkap">
@@ -48,8 +48,14 @@
         </div>
         <button type="submit">Daftar</button>
       </form>
-      <p>Sudah punya akun? <a href="login.html">Login</a></p>
+      <p>Sudah punya akun? <a href="index.html">Login</a></p>
     </div>
   </div>
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      window.location.href = 'beranda.html';
+    });
+  </script>
 </body>
 </html>

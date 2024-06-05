@@ -1,5 +1,6 @@
+/* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-family: 'Poppins', sans-serif; /* Gunakan 'Poppins' */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,12 +12,13 @@ body {
     height: 100vh;
 }
 
+/* Sidebar Styles */
 .sidebar {
     background-color: #387ADF;
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    align-items: flex-start; /* Ganti align-items ke flex-start */
     padding: 20px;
     position: fixed;
     top: 0;
@@ -28,17 +30,11 @@ body {
 .logo-container {
     width: 100%;
     display: flex;
-    justify-content: left;
+    justify-content: flex-start; /* Ganti justify-content ke flex-start */
     margin-bottom: 20px;
 }
 
-.logo {
-    width: 180px;
-    height: auto;
-    padding: 10px;
-    border-radius: 5px;
-}
-
+/* Profile Styles */
 .profile-link {
     text-decoration: none;
     color: inherit;
@@ -55,20 +51,25 @@ body {
     height: 70px;
 }
 
-.profile:hover {
-    background-color: #c0c8e0; /* Background color on hover */
-}
-
 .profile .icon {
     height: 50px;
     border-radius: 50%;
 }
 
 .user-info {
-    margin-left: 10px;
-    color: #000000;
+    display: flex;
+    align-items: center;
 }
 
+.user-info h1 {
+    margin: 0; /* Hapus margin pada h1 */
+}
+
+.logout-btn {
+    margin-left: auto; /* Ikon logout akan berada di ujung kanan */
+}
+
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
@@ -108,6 +109,7 @@ nav ul li a.active {
     font-weight: bold;
 }
 
+/* Logout Button Styles */
 .logout-btn {
     background-color: #D3DEEF;
     color: #000000;
@@ -121,10 +123,9 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
+    font-size: small;
     font-weight: bolder;
-    font-size: medium;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    text-decoration: none; /* Menghilangkan garis bawah di tombol logout */
 }
 
 .logout-btn img {
@@ -135,16 +136,18 @@ nav ul li a.active {
 
 .logout-btn:hover {
     background-color: #c0c8e0;
+    text-decoration: none; /* Menghapus garis bawah pada hover */
 }
 
+/* Main Content Styles */
 .main-content {
-    margin-left: 240px; /* Sidebar width + padding */
+    margin-left: 250px; /* Lebar sidebar */
     padding: 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden; /* Prevent vertical scrolling */
+    overflow: hidden; /* Mencegah scrolling vertikal */
 }
 
 .content-header, .status-container {
@@ -154,34 +157,46 @@ nav ul li a.active {
     margin: 0 auto; /* Center the elements */
 }
 
+/* Adjustments for Content Header */
 .content-header {
-    background-color: #387ADF;
-    border-radius: 10px;
+    background-color: #EBD515;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     color: white;
-    text-align: center;
     font-weight: bold;
     margin-bottom: 15px;
-    padding: 20px; /* Add padding if necessary */
-    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    padding: 20px;
+    margin: 0;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-width: 1000px; /* Adjusted max width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
+/* Adjustments for Status Container */
 .status-container {
     background-color: white;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     padding: 20px;
-    min-height: 420px; /* Added minimum height */
+    min-height: 420px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the buttons */
-    gap: 5px; /* Reduced gap between buttons */
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    max-width: 1000px; /* Adjusted max width */
 }
+
+
+
 
 .status-box {
     display: flex;
     justify-content: space-between; /* Space between the text and the icon */
     align-items: center;
-    border: none;
     padding: 20px;
     margin: 5px 0; /* Reduced vertical margin for the buttons */
     border-radius: 10px;
@@ -190,13 +205,15 @@ nav ul li a.active {
     transition: background-color 0.3s ease;
     width: 94%; /* Adjusted width for the buttons */
     max-width: 950px; /* Adjusted max width */
-    min-height: 100px; /* Added minimum height */
+    min-height: 140px; /* Added minimum height */
     font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    text-decoration: none; /* Ensure no underline */
+    color: inherit; /* Inherit text color */
 }
 
 .status-box h1 {
     color: white; /* Set text color to white */
-    font-size: 15px;
+    font-size: 30px;
     margin: 0;
     flex: 1; /* Allow h1 to take remaining space */
 }
@@ -208,17 +225,58 @@ nav ul li a.active {
 }
 
 .status-box.yellow {
-    background-color: #EBD515;
+    background-color: #ffeb3b;
 }
 
 .status-box.green {
-    background-color: #6EE014;
+    background-color: #4caf50;
 }
 
 .status-box.red {
-    background-color: #FF3535;
+    background-color: #f44336;
 }
 
 .status-box:hover {
     opacity: 0.8;
 }
+
+/* Tambahan CSS untuk jarak antar elemen di dalam tabel */
+.status-container table {
+    width: 100%;
+    border-collapse: collapse; /* Menggabungkan border-cells menjadi satu */
+}
+
+.status-container th,
+.status-container td {
+    padding: 10px; /* Atur padding untuk sel-sel tabel */
+    text-align: left; /* Atur alignment teks ke kiri */
+}
+
+/* Atur jarak antar baris */
+.status-container tr:not(:first-child) {
+    margin-top: 10px;
+}
+
+/* Atur jarak antar kolom */
+.status-container th:not(:first-child),
+.status-container td:not(:first-child) {
+    padding-left: 15px;
+}
+
+.edit-button {
+    background-color: transparent; /* Hapus background warna */
+    border: none; /* Hapus border */
+    padding: 0; /* Hapus padding */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  .edit-button img {
+    width: 20px; /* Sesuaikan ukuran ikon */
+    height: 20px;
+  }
+  
+  /* Opsi tambahan untuk menyesuaikan tampilan saat tombol dihover */
+  .edit-button:hover {
+    opacity: 0.8;
+  }
+  

@@ -10,7 +10,7 @@ function createWindow() {
     },
   });
 
-  mainWindow.loadFile('login.html');
+  mainWindow.loadFile('index.html');
 }
 
 app.on('ready', createWindow);

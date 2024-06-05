@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'poppins';
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
     background-color: #D3DEEF;
 }
 
@@ -51,21 +51,13 @@ body {
     border-radius: 5px;
     width: calc(100% - 8px);
     height: 70px;
-}
-
-.profile:hover {
-    background-color: #c0c8e0; /* Background color on hover */
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-weight: bold; /* Make text bold */
 }
 
 .profile .icon {
     height: 50px;
     border-radius: 50%;
-}
-
-.profile-details {
-    display: flex;
-    flex-direction: column;
-    width: 300px; /* Sesuaikan lebar sesuai kebutuhan */
 }
 
 .user-info {
@@ -91,7 +83,8 @@ nav ul li a {
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-weight: bold;
+    font-weight: bold; /* Ensure links are bold */
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 nav ul li a img {
@@ -124,9 +117,10 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: medium;
-    text-decoration: none; /* Menghilangkan garis bawah di tombol logout */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 .logout-btn img {
@@ -137,26 +131,29 @@ nav ul li a.active {
 
 .logout-btn:hover {
     background-color: #c0c8e0;
-    text-decoration: none; /* Menghapus garis bawah pada hover */
+    text-decoration: none; /* Remove underline on hover */
 }
 
 .content-header {
     background-color: #387ADF;
-    border-radius: 10px 10px 10px 10px; /* Menambahkan sudut pada border */
+    border-radius: 10px; /* Rounded corners */
     padding: 10px;
     color: white;
-    text-align:center;
-    font-weight: bold;
+    text-align: center;
+    font-weight: bold; /* Make header text bold */
     height: 50px;
     line-height: 50px;
     margin-top: 0;
     margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 .content-header h2 {
     font-size: 22px;
-    margin-top: 0; /* Mengurangi jarak di atas tulisan */
-    margin-bottom: 10px; 
+    margin-top: 0; /* Reduce top margin */
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-weight: bold; /* Make h2 text bold */
 }
 
 .main-content {
@@ -167,23 +164,28 @@ nav ul li a.active {
     overflow-y: auto;
     position: relative;
     z-index: 1;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 .form-container {
     background-color: white;
     padding: 20px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     overflow-y: auto;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 form {
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-weight: bold; /* Make form text bold */
 }
 
 form label {
     margin-top: 10px;
     margin-bottom: 5px;
+    font-weight: bold; /* Make label text bold */
 }
 
 form input, form select, form textarea {
@@ -191,15 +193,18 @@ form input, form select, form textarea {
     margin-bottom: 10px;
     border: 1px solid #ced4da;
     border-radius: 5px;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 form input::placeholder, form textarea::placeholder {
     color: rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 .required {
     color: red;
     margin-left: 5px;
+    font-weight: bold; /* Make required indicator bold */
 }
 
 .form-buttons {
@@ -212,14 +217,17 @@ form input::placeholder, form textarea::placeholder {
     border: none;
     cursor: pointer;
     margin-left: 10px;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 .form-buttons button[type="reset"] {
     background-color: #ffc107;
     color: white;
+    font-weight: bold; /* Make reset button text bold */
 }
 
 .form-buttons button[type="submit"] {
     background-color: #28a745;
     color: white;
+    font-weight: bold; /* Make submit button text bold */
 }
