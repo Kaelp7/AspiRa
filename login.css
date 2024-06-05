@@ -98,6 +98,10 @@ button {
   margin-top: 10px;
 }
 
+a {
+  color: #fff;
+}
+
 button:hover {
   background-color: #0062cc;
 }
