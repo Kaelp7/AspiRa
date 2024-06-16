@@ -1,12 +1,13 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
     background-color: #D3DEEF;
 }
 
 .container {
     display: flex;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -51,6 +52,8 @@ body {
     border-radius: 5px;
     width: calc(100% - 8px);
     height: 70px;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-weight: bold; /* Make text bold */
 }
 
 .profile .icon {
@@ -81,7 +84,8 @@ nav ul li a {
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-weight: bold;
+    font-weight: bold; /* Ensure links are bold */
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 nav ul li a img {
@@ -114,9 +118,10 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    font-weight: 800;
-    font-size: small;
-    text-decoration: none; /* Menghilangkan garis bawah di tombol logout */
+    font-weight: bolder;
+    font-size: medium;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 .logout-btn img {
@@ -127,7 +132,7 @@ nav ul li a.active {
 
 .logout-btn:hover {
     background-color: #c0c8e0;
-    text-decoration: none; /* Menghapus garis bawah pada hover */
+    text-decoration: none; /* Remove underline on hover */
 }
 
 .main-content {
