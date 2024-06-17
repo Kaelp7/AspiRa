@@ -7,12 +7,19 @@ body {
     background-color: #D3DEEF;
 }
 
+body {
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #D3DEEF;
+}
+
 .container {
     display: flex;
     height: 100vh;
 }
 
-/* Sidebar Styles */
 .sidebar {
     background-color: #387ADF;
     color: rgb(255, 255, 255);
@@ -151,6 +158,8 @@ nav ul li a.active {
     flex-direction: column;
     align-items: center;
     overflow: hidden; /* Mencegah scrolling vertikal */
+    max-height: 98%;
+    min-height: 450px; /* Minimum height */
 }
 
 .content-header, .status-container {
@@ -168,13 +177,13 @@ nav ul li a.active {
     color: white;
     font-weight: bold;
     margin-bottom: 15px;
-    padding: 20px;
+    padding: 15px;
     margin: 0;
     text-align: left;
     font-family: 'Poppins', sans-serif;
     width: 100%;
-    max-width: 1000px; /* Adjusted max width */
     box-sizing: border-box; /* Ensure padding is included in the width */
+    max-width:200%;
 }
 
 /* Adjustments for Status Container */
@@ -183,17 +192,18 @@ nav ul li a.active {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 20px;
-    min-height: 420px;
+    min-height: 490px; /* Minimum height */
+    max-height: calc(100vh - 100px); /* Maximum height relative to viewport */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
     width: 100%;
-    max-width: 1000px; /* Adjusted max width */
+    overflow-y: auto; /* Enable vertical scroll */
+    max-width:200%;
+
 }
-
-
 
 
 .status-box {
@@ -212,6 +222,7 @@ nav ul li a.active {
     font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
     text-decoration: none; /* Ensure no underline */
     color: inherit; /* Inherit text color */
+
 }
 
 .status-box h1 {
@@ -227,21 +238,6 @@ nav ul li a.active {
     margin-left: 10px; /* Add some space between text and icon */
 }
 
-.status-box.yellow {
-    background-color: #ffeb3b;
-}
-
-.status-box.green {
-    background-color: #4caf50;
-}
-
-.status-box.red {
-    background-color: #f44336;
-}
-
-.status-box:hover {
-    opacity: 0.8;
-}
 
 /* Tambahan CSS untuk jarak antar elemen di dalam tabel */
 .status-container table {
