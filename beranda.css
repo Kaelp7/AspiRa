@@ -114,9 +114,10 @@ nav ul li a.active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    font-weight: 800;
-    font-size: small;
-    text-decoration: none; /* Menghilangkan garis bawah di tombol logout */
+    font-weight: bolder;
+    font-size: medium;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
 .logout-btn img {
