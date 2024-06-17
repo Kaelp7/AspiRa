@@ -55,29 +55,29 @@
               <td>Kebersihan Lingkungan</td>
               <td>01-04-2004</td>
               <td>Manado</td>
-              <td><button class="detail-button">Lihat detail</button></td>
+              <td><button class="detail-button" onclick="navigateToDetailPage()">Lihat detail</button>
               <td>
                 <button class="dokumentasi-button">Lihat dokumentasi</button> <!-- Mengubah ikon menjadi tombol -->
               </td>
-              <td><button class="dokumentasi-button">Edit</button> <!-- Mengubah ikon menjadi tombol --></td>
+              <td><button class="dokumentasi-button" onclick="navigateToEditPage()">Edit</button></td>
             </tr>
             <td>Kebersihan Lingkungan</td>
               <td>01-04-2004</td>
               <td>Manado</td>
-              <td><button class="detail-button">Lihat detail</button></td>
+              <td><button class="detail-button" onclick="navigateToDetailPage()">Lihat detail</button>
               <td>
                 <button class="dokumentasi-button">Lihat dokumentasi</button> <!-- Mengubah ikon menjadi tombol -->
               </td>
-              <td><button class="dokumentasi-button">Edit</button> <!-- Mengubah ikon menjadi tombol --></td>
+              <td><button class="dokumentasi-button" onclick="navigateToEditPage()">Edit</button></td>
             </tr>
             <td>Kebersihan Lingkungan</td>
               <td>01-04-2004</td>
               <td>Manado</td>
-              <td><button class="detail-button">Lihat detail</button></td>
+              <td><button class="detail-button" onclick="navigateToDetailPage()">Lihat detail</button>
               <td>
                 <button class="dokumentasi-button">Lihat dokumentasi</button> <!-- Mengubah ikon menjadi tombol -->
               </td>
-              <td><button class="dokumentasi-button">Edit</button> <!-- Mengubah ikon menjadi tombol --></td>
+              <td><button class="dokumentasi-button" onclick="navigateToEditPage()">Edit</button></td>
             </tr>
             
           </tbody>
@@ -90,6 +90,12 @@
         console.log('Button clicked');
         window.location.href = 'status.html';
     }
+    function navigateToEditPage() {
+      window.location.href = 'ubah-aduan.html';
+  }
+  function navigateToDetailPage() {
+    window.location.href = 'lihat-detail-isi.html';
+}
   </script>
 </body>
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspira Status Page</title>
+    <link rel="stylesheet" href="ubah-aduan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .editable {
+            display: none;
+            width: 75%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .edit-mode .editable {
+            display: block;
+        }
+        .edit-mode .non-editable {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="logocopy.png" class="logo" alt="AspiRa Logo">
+            </div>
+            <a href="profil.html" class="profile-link">
+                <div class="profile">
+                    <img src="profil.png" class="icon" alt="Profile Icon">
+                    <div class="user-info">
+                        <p>Nama User</p>
+                        <p>NIP</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="Beranda.html" class="beranda active"><img src="beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="pengaduan.html" class="buat-pengaduan"><img src="pengaduan.png" alt="Buat Pengaduan Icon"> Buat Pengaduan</a></li>
+                    <li><a href="status.html" class="status-pengaduan"><img src="status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="logout-btn"><img src="logout_icon.png" alt="Logout Icon"> Logout</a>
+        </aside>
+        <div class="main-content">
+            <div class="top-box">
+                <button class="back-button" onclick="goBack()">
+                    <i class="fas fa-arrow-left"></i> Back
+                  </button>
+            </div>
+            <div class="isi-container">
+                <div class="content">
+                    <div class="detail-container">
+                        <div class="detail-left">
+                            <h3>Jenis Pengaduan</h3>
+                            <p class="non-editable"><span class="jenis_pengaduan">Kebersihan Lingkungan</span></p>
+                            <select class="editable">
+                                <option value="Kebersihan Lingkungan">Kebersihan Lingkungan</option>
+                                <option value="Keamanan dan Kriminalitas">Keamanan dan Kriminalitas</option>
+                                <option value="Infrastruktur Publik">Infrastruktur Publik</option>
+                                <option value="Kesehatan Masyarakat">Kesehatan Masyarakat</option>
+                                <option value="Pelayanan Publik">Pelayanan Publik</option>
+                                <option value="Pendidikan">Pendidikan</option>
+                                <option value="Ekonomi">Ekonomi</option>
+                                <option value="Kesejahteraan Sosial">Kesejahteraan</option>
+                                <option value="Pariwisata Lokal">Pariwisata Lokal</option>
+                                <option value="Kebudayaan dan Kesenian">Kebudayaan dan Kesenian</option>
+                            </select>
+
+                            <h3>Tanggal</h3>
+                            <p class="non-editable">01-04-2024</p>
+                            <input type="date" class="editable" value="2024-04-01">
+
+                            <h3>Wilayah</h3>
+                            <p class="non-editable"><span class="wilayah">Sario</span></p>
+                            <select class="editable">
+                                <option value="Bunaken">Bunaken</option>
+                                <option value="Malalayang">Malalayang</option>
+                                <option value="Mapanget">Mapanget</option>
+                                <option value="Paal Dua">Paal Dua</option>
+                                <option value="Sario">Sario</option>
+                                <option value="Singkil">Singkil</option>
+                                <option value="Tikala">Tikala</option>
+                                <option value="Tuminting">Tuminting</option>
+                                <option value="Wanea">Wanea</option>
+                                <option value="Wenang">Wenang</option>
+                            </select>
+
+                            <h3>Lokasi</h3>
+                            <p class="non-editable">Ranotana</p>
+                            <input type="text" class="editable" value="Ranotana">
+
+                            <h3>Dokumentasi</h3>
+                            <button class="doc-button">Lihat Dokumentasi</button>
+                        </div>
+                        <div class="detail-right">
+                            <h3>Isi</h3>
+                            <p class="non-editable">Sampah di Kecamatan Ranotana semakin memburuk. Tidak hanya mencemari lingkungan, tetapi juga mengganggu kesehatan masyarakat dan keindahan kota. Perlunya tindakan cepat dan berkelanjutan untuk mengatasi masalah ini</p>
+                            <textarea class="editable">Sampah di Kecamatan Ranotana semakin memburuk. Tidak hanya mencemari lingkungan, tetapi juga mengganggu kesehatan masyarakat dan keindahan kota. Perlunya tindakan cepat dan berkelanjutan untuk mengatasi masalah ini</textarea>
+                        </div>
+                    </div>
+                    <button class="edit-button" onclick="toggleEditMode()">Edit</button>
+                    <button class="save-button" onclick="saveChanges()" style="display: none;">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            console.log('Button clicked');
+            window.location.href = 'status.html';
+        }
+
+        function toggleEditMode() {
+            document.querySelector('.detail-container').classList.toggle('edit-mode');
+            document.querySelector('.edit-button').style.display = 'none';
+            document.querySelector('.save-button').style.display = 'block';
+        }
+
+        function saveChanges() {
+            const container = document.querySelector('.detail-container');
+            const editables = container.querySelectorAll('.editable');
+            const nonEditables = container.querySelectorAll('.non-editable');
+
+            editables.forEach((editable, index) => {
+                nonEditables[index].innerText = editable.value;
+            });
+
+            container.classList.remove('edit-mode');
+            document.querySelector('.edit-button').style.display = 'block';
+            document.querySelector('.save-button').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
