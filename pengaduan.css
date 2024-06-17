@@ -150,10 +150,11 @@ nav ul li a.active {
     margin-top: 0;
     margin-bottom: 15px;
     font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-size: 12px;
 }
 
-.content-header h2 {
-    font-size: 22px;
+.content-header h1 {
+    font-size: 24px;
     margin-top: 0; /* Reduce top margin */
     margin-bottom: 10px;
     font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */

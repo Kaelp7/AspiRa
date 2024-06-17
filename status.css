@@ -163,10 +163,10 @@ nav ul li a.active {
     border-radius: 10px;
     color: white;
     text-align: center;
-    margin-bottom: 15px;
-    padding: 20px; /* Add padding if necessary */
+    margin-bottom: 20px;
+    padding: 4px; /* Add padding if necessary */
     font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .status-container {

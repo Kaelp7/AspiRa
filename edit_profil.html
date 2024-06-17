@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Profil</title>
+    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="edit_profil.js">
+    <link rel="stylesheet" href="php/edit_profil.php">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="asset/logo aspira.jpg" class="logo" alt="AspiRa Logo">
+            </div>
+            <a href="profil.html" class="profile-link">
+                <div class="profile">
+                    <img src="asset/profil.png" class="icon" alt="Profile Icon">
+                    <div class="user-info">
+                        <p>Nama User</p>
+                        <p>NIP</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="Beranda.html" class="beranda"><img src="asset/beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="pengaduan.html" class="buat-pengaduan"><img src="asset/pengaduan.png" alt="Buat Pengaduan Icon"> Buat Pengaduan</a></li>
+                    <li><a href="status.html" class="status-pengaduan"><img src="asset/status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="logout-btn"><img src="asset/logout_icon.png" alt="Logout Icon"> Logout</a>
+        </aside>
+        <div class="content">
+            <h1>Kelola Profil</h1>
+            <div class="profile-section">
+                <h2>Profil</h2>
+                <div class="profile-info">
+                    <div class="profile-pic">
+                        <img src="asset/profil.png" alt="Avatar">
+                        <input type="file" id="upload" style="display:none"/>
+                        <label for="upload" class="file-input-label">Pilih Foto</label>
+                    </div>
+                    <form class="profile-details">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" name="nama" value="Chyntia">
+                        </div>
+                        <div class="form-group">
+                            <label for="nip">NIP</label>
+                            <input type="text" id="nip" name="nip" value="72018765342">
+                        </div>
+                        <div class="form-group">
+                            <label>Wilayah</label>
+                            <p id="wilayah" class="static-info">Sario</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="no_hp">No. HP</label>
+                            <input type="text" id="no_hp" name="no_hp" value="082345197654">
+                        </div>
+                        <button type="submit" class="edit-button">Selesai</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
