@@ -183,6 +183,8 @@ html, body {
     border-radius: 5px;
     width: calc(100% - 8px);
     height: 70px;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-weight: bold; /* Make text bold */
 }
 
 .profile:hover {
@@ -191,7 +193,7 @@ html, body {
 
 .profile .icon {
     height: 50px;
-    border-radius: 0%;
+    border-radius: 50%;
 }
 
 .user-info {
@@ -217,7 +219,7 @@ nav ul li a {
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-weight: bold;
+    font-weight: bold; /* Ensure links are bold */
     font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
 }
 
@@ -265,4 +267,5 @@ nav ul li a.active {
 
 .logout-btn:hover {
     background-color: #c0c8e0;
+    text-decoration: none; /* Remove underline on hover */
 }
