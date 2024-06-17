@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AspirGo Status Page</title>
+    <link rel="stylesheet" href="status.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="logocopy.png" class="logo" alt="AspiRa Logo">
+            </div>
+            <a href="profil.html" class="profile-link">
+                <div class="profile">
+                    <img src="profil.png" class="icon" alt="Profile Icon">
+                    <div class="user-info">
+                        <p>Nama User</p>
+                        <p>NIP</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="beranda-admin.html" class="beranda"><img src="beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="status-admin.html" class="status-pengaduan active"><img src="status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="logout-btn"><img src="logout_icon.png" alt="Logout Icon"> Logout</a>
+        </aside>
+        <div class="main-content">
+            <div class="content-header">
+                <h1>Status Pengaduan</h1>
+            </div>
+            <div class="status-container">
+                <a href="diproses-admin.html" class="status-box yellow">
+                    <h2>Diproses</h2>
+                    <span class="status-icon">⌛</span>
+                </a>
+                <a href="diterima-admin.html" class="status-box green">
+                    <h2>Diterima</h2>
+                    <span class="status-icon">✔</span>
+                </a>
+                <a href="ditolak-admin.html" class="status-box red">
+                    <h2>Ditolak</h2>
+                    <span class="status-icon">✖</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

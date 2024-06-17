@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron App</title>
+  <link rel="stylesheet" href="diproses.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo-container">
+        <img src="logocopy.png" class="logo" alt="AspiRa Logo">
+      </div>
+      <a href="profil.html" class="profile-link">
+        <div class="profile">
+          <img src="profil.png" class="icon" alt="Profile Icon">
+          <div class="user-info">
+            <p>Nama User</p>
+            <p>NIP</p>
+          </div>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="beranda-admin.html" class="beranda"><img src="beranda.png" alt="Beranda Icon"> Beranda</a></li>
+          <li><a href="status-admin.html" class="status-pengaduan active"><img src="status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="logout-btn"><img src="logout_icon.png" alt="Logout Icon"> Logout</a>
+    </aside>
+    <div class="main-content">
+      <div class="content-header">
+        <h1>Diproses</h1>
+        <button class="back-button" onclick="goBack()">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
+      <div class="status-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Pemohon</th>
+              <th>Jenis Pengaduan</th>
+              <th>Tanggal</th>
+              <th>Wilayah</th>
+              <th>Lokasi</th>
+              <th>Isi</th>
+              <th>Dokumentasi</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Elouis Bridgerton</td>
+              <td>Kebersihan Lingkungan</td>
+              <td>01-04-2004</td>
+              <td>Ranotana</td>
+              <td>Sario</td>
+              <td><button class="detail-button" onclick="navigateToDetailPage()">Lihat detail</button>
+              <td><button class="dokumentasi-button">Lihat dokumentasi</button></td>
+              <td><button class="dokumentasi-button" onclick="navigateToEditPage()">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Elouis Bridgerton</td>
+                <td>Kebersihan Lingkungan</td>
+                <td>01-04-2004</td>
+                <td>Ranotana</td>
+                <td>Sario</td>
+                <td><button class="detail-button" onclick="navigateToDetailPage()">Lihat detail</button>
+                <td><button class="dokumentasi-button">Lihat dokumentasi</button></td>
+                <td><button class="dokumentasi-button" onclick="navigateToEditPage()">Edit</button></td>
+              </tr>
+              <tr>
+                <td>Elouis Bridgerton</td>
+                <td>Kebersihan Lingkungan</td>
+                <td>01-04-2004</td>
+                <td>Ranotana</td>
+                <td>Sario</td>
+                <td><button class="detail-button" onclick="navigateToDetailPage()">Lihat detail</button>
+                <td><button class="dokumentasi-button">Lihat dokumentasi</button></td>
+                <td><button class="dokumentasi-button" onclick="navigateToEditPage()">Edit</button></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script>
+    function goBack() {
+        console.log('Button clicked');
+        window.location.href = 'status-admin.html';
+    }
+    function navigateToEditPage() {
+      window.location.href = 'ubah-aduan.html';
+  }
+  function navigateToDetailPage() {
+    window.location.href = 'lihat-detail-isi-admin.html';
+}
+  </script>
+</body>
+</html>
