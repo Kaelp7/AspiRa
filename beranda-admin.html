@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="beranda.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="logocopy.png" class="logo" alt="AspiRa Logo">
+            </div>
+            <a href="profil.html" class="profile-link">
+                <div class="profile">
+                    <img src="profil.png" class="icon" alt="Profile Icon">
+                    <div class="user-info">
+                        <p>Nama User</p>
+                        <p>NIP</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="beranda-admin.html" class="beranda active"><img src="beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="status.html" class="status-pengaduan"><img src="status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="logout-btn"><img src="logout_icon.png" alt="Logout Icon"> Logout</a>
+        </aside>
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Selamat Datang di Dashboard Aspira !</h2>
+            </div>
+            <section class="complaints">
+                <h3>Riwayat Pengaduan</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pemohon</th>
+                            <th>Jenis Pengaduan</th>
+                            <th>Tanggal</th>
+                            <th>Wilayah</th>
+                            <th>Lokasi</th>
+                            <th>Isi</th>
+                            <th>Dokumentasi</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Elouis Bridgerton</td>
+                            <td>Kebersihan Lingkungan</td>
+                            <td>01-04-2004</td>
+                            <td>Ranotana</td>
+                            <td>Sario</td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
+                            <td><button class="doc-btn">Lihat Dokumen</button></td>
+                            <td><button class="status-btn-diproses">Diproses</button></td>
+                        </tr>
+                        <tr>
+                            <td>Elouis Bridgerton</td>
+                            <td>Kebersihan Lingkungan</td>
+                            <td>01-04-2004</td>
+                            <td>Ranotana</td>
+                            <td>Sario</td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
+                            <td><button class="doc-btn">Lihat Dokumen</button></td>
+                            <td><button class="status-btn-diproses">Diproses</button></td>
+                        </tr>
+                        <tr>
+                            <td>Elouis Bridgerton</td>
+                            <td>Kebersihan Lingkungan</td>
+                            <td>01-04-2004</td>
+                            <td>Ranotana</td>
+                            <td>Sario</td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
+                            <td><button class="doc-btn">Lihat Dokumen</button></td>
+                            <td><button class="status-btn-diproses">Diproses</button></td>
+                        </tr>
+                        <tr>
+                            <td>Elouis Bridgerton</td>
+                            <td>Kebersihan Lingkungan</td>
+                            <td>01-04-2004</td>
+                            <td>Ranotana</td>
+                            <td>Sario</td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
+                            <td><button class="doc-btn">Lihat Dokumen</button></td>
+                            <td><button class="status-btn-diproses">Diproses</button></td>
+                        </tr>
+                        <tr>
+                            <td>Elouis Bridgerton</td>
+                            <td>Kebersihan Lingkungan</td>
+                            <td>01-04-2004</td>
+                            <td>Ranotana</td>
+                            <td>Sario</td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
+                            <td><button class="doc-btn">Lihat Dokumen</button></td>
+                            <td><button class="status-btn-diproses">Diproses</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script>
+        function navigateToDetailPage() {
+            window.location.href = 'lihat-detail-isi-admin.html';
+        }
+    </script>
+</body>
+</html>
