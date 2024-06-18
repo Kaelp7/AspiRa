@@ -1,3 +1,4 @@
+<!-- login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
   <main>
     <div id="login-form" class="container">
       <h1>Silahkan Login</h1>
-      <form action="" method="post">
+      <form id="loginForm">
         <div class="input-container">
           <i class="fas fa-user icon"></i>
           <input type="text" id="username" name="username" placeholder="Masukkan Username" required>
@@ -24,10 +25,43 @@
           <i class="fas fa-key icon"></i>
           <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
         </div>
-        <button name="login" type="submit" id="login-button"><a href="beranda.html">Login</a></button>
+        <button type="submit" id="login-button">Login</button>
       </form>
+      <p id="error-message" style="color: red; display: none;"></p>
       <p>Belum punya akun? <a href="regis.html" id="register-link">Buat Akun</a></p>
     </div>
   </main>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const errorMessage = document.getElementById('error-message');
+
+      fetch('http://localhost:3001/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      })
+      .then(response => response.text())
+      .then(data => {
+        if (data === 'Login successful') {
+          window.location.href = 'beranda.html';
+        } else {
+          errorMessage.style.display = 'block';
+          errorMessage.textContent = data;
+          document.getElementById('username').focus();  // Set focus back to the username field
+        }
+      })
+      .catch(error => {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'An error occurred. Please try again.';
+        document.getElementById('username').focus();  // Set focus back to the username field
+      });
+    });
+  </script>
 </body>
 </html>
