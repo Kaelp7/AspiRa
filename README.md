@@ -1,8 +1,8 @@
 # AspiRa
-
 CARA MEMBUKA APLIKASI:
 1. npm install sqlite3 express body-parser bcrypt electron
 2. npm start
+
 
 NAMA ANGGOTA KELOMPOK:
 1. Dina Wowor       (210211060022)
