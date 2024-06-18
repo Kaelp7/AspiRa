@@ -12,7 +12,7 @@ body {
   background-color: #387ADF;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Changed from center to flex-start to allow space at the top */
   height: 100vh;
 }
 
@@ -21,21 +21,23 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 20px;
 }
 
 .form-box {
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 40px 20px 20px 20px;
   width: 350px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin: 15px 0 20px 0; /* Added top margin to create space */
 }
 
 .form-box h1 {
   margin-bottom: 20px;
   color: #1e5bb5;
-  font-size: 1.2rem; /* Adjusted to a smaller size */
+  font-size: 1.2rem;
 }
 
 .form-box form {
@@ -60,9 +62,9 @@ body {
 }
 
 .form-box .input-container input::placeholder {
-  color: #666; /* Placeholder color */
-  font-size: 14px; /* Adjust font size */
-  line-height: 1.5; /* Adjust line height */
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
   padding-top: 2px;
 }
 
@@ -75,7 +77,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .form-box button:hover {
@@ -83,7 +85,7 @@ body {
 }
 
 .form-box p {
-  margin-top: 10px;
+  margin-top: 15px;
   color: black;
 }
 
@@ -104,7 +106,20 @@ body {
 
 .form-box .input-container label {
   font-weight: '\f032';
-  display: block; /* Set display to block to stack vertically */
-    margin-bottom: 1px; /* Menambahkan jarak antara teks label dan placeholder */
-  }
-  
+  display: block;
+  margin-bottom: 5px;
+}
+
+label {
+  font-weight: bold;
+  display: inline-block;
+  width: 120px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 120px);
+  box-sizing: border-box;
+  margin-top: 5px;
+}

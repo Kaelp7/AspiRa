@@ -9,11 +9,11 @@
     <div class="container">
         <aside class="sidebar">
             <div class="logo-container">
-                <img src="logo aspira.png" class="logo" alt="AspiRa Logo">
+                <img src="asset/logocopy.png" class="logo" alt="AspiRa Logo">
             </div>
             <a href="profil.html" class="profile-link">
                 <div class="profile">
-                    <img src="profil.png" class="icon" alt="Profile Icon">
+                    <img src="asset/profil.png" class="icon" alt="Profile Icon">
                     <div class="user-info">
                         <p>Nama User</p>
                         <p>NIP</p>
@@ -22,12 +22,12 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="Beranda.html" class="beranda active"><img src="beranda.png" alt="Beranda Icon"> Beranda</a></li>
-                    <li><a href="pengaduan.html" class="buat-pengaduan"><img src="pengaduan.png" alt="Buat Pengaduan Icon"> Buat Pengaduan</a></li>
-                    <li><a href="status.html" class="status-pengaduan"><img src="status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                    <li><a href="Beranda.html" class="beranda active"><img src="asset/beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="pengaduan.html" class="buat-pengaduan"><img src="asset/pengaduan.png" alt="Buat Pengaduan Icon"> Buat Pengaduan</a></li>
+                    <li><a href="status.html" class="status-pengaduan"><img src="asset/status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
                 </ul>
             </nav>
-            <a href="login.html" class="logout-btn"><img src="logout_icon.png" alt="Logout Icon"> Logout</a>
+            <a href="login.html" class="logout-btn"><img src="asset/logout_icon.png" alt="Logout Icon"> Logout</a>
         </aside>
         <main class="main-content">
             <div class="content-header">
@@ -56,7 +56,7 @@
                             <td>01-04-2004</td>
                             <td>Sario</td>
                             <td>Ranotana</td>
-                            <td><button class="detail-btn">Detail</button></td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
                             <td><button class="doc-btn">Lihat Dokumen</button></td>
                             <td><button class="status-btn-diproses">Diproses</button></td>
                         </tr>
@@ -65,7 +65,7 @@
                             <td>05-04-2004</td>
                             <td>Sario</td>
                             <td>Sario Kota Baru</td>
-                            <td><button class="detail-btn">Detail</button></td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
                             <td><button class="doc-btn">Lihat Dokumen</button></td>
                             <td><button class="status-btn-diterima">Diterima</button></td>
                         </tr>
@@ -74,7 +74,7 @@
                             <td>05-04-2004</td>
                             <td>Sario</td>
                             <td>Sario Utara</td>
-                            <td><button class="detail-btn">Detail</button></td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
                             <td><button class="doc-btn">Lihat Dokumen</button></td>
                             <td><button class="status-btn-ditolak">Ditolak</button></td>
                         </tr>
@@ -83,7 +83,7 @@
                             <td>05-04-2004</td>
                             <td>Sario</td>
                             <td>Ranotana</td>
-                            <td><button class="detail-btn">Detail</button></td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
                             <td><button class="doc-btn">Lihat Dokumen</button></td>
                             <td><button class="status-btn-diproses">Diproses</button></td>
                         </tr>
@@ -92,7 +92,7 @@
                             <td>05-04-2004</td>
                             <td>Sario</td>
                             <td>Sario Tumpaan</td>
-                            <td><button class="detail-btn">Detail</button></td>
+                            <td><button class="detail-btn" onclick="navigateToDetailPage()">Detail</button>
                             <td><button class="doc-btn">Lihat Dokumen</button></td>
                             <td><button class="status-btn-diproses">Diproses</button></td>
                         </tr>
@@ -101,6 +101,13 @@
             </section>
         </main>
     </div>
-    <script src="renderer.js"></script>
+    <script
+    src="renderer.js">
+</script>
+<script>
+    function navigateToDetailPage() {
+        window.location.href = 'lihat-detail-isi.html';
+    }
+</script>
 </body>
 </html>

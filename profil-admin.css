@@ -1,0 +1,342 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #D3DEEF;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    color: #ffffff;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #D3DEEF;
+    padding: 14px;
+    border-radius: 5px;
+    width: calc(100% - 8px);
+    height: 70px;
+}
+
+.profile:hover {
+    background-color: #c0c8e0; /* Background color on hover */
+}
+
+.profile .icon {
+    height: 50px;
+    border-radius: 0%;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Sesuaikan lebar sesuai kebutuhan */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-pic img {
+    width: 220px;
+    height: 220px;
+    border-radius: 0%;
+    margin-right: 20px;
+}
+
+.file-input-label {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-top: 10px;
+}
+
+.col1 {
+    width: 45%; /* Sesuaikan lebar kolom sesuai kebutuhan */
+    padding: 5px;
+    margin-right: 5%;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-info {
+    margin-left: 10px;
+    color: #000000;
+}
+
+.content {
+    width: 80%;
+    padding: 20px;
+    margin-left: 240px; /* Menambah jarak agar tidak tertutup sidebar */
+}
+
+.profile-section {
+    background-color: #ffffff;
+    border-radius: 5px;
+    min-height: 400px;
+    padding: 10px;
+}
+
+.profile-section h2 {
+    background-color: #7BC9FF;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-pic {
+    margin-right: 20px;
+}
+
+.profile-details p {
+    margin: 5px 0;
+}
+
+.edit-button {
+    background-color: #387ADF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    align-self: flex-end; /* Posisikan tombol di kanan bawah */
+    transition: background-color 0.3s ease; /* Tambahkan transisi untuk efek halus */
+}
+
+.edit-button:hover {
+    background-color: #2858a0; /* Warna baru saat hover */
+}
+
+.sidebar {
+    background-color: #387ADF;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #D3DEEF;
+    padding: 14px;
+    border-radius: 5px;
+    width: calc(100% - 8px);
+    height: 70px;
+    font-family: 'Poppins', sans-serif; /* Ensure 'Poppins' is applied */
+    font-weight: bold; /* Make text bold */
+}
+
+.profile:hover {
+    background-color: #c0c8e0; /* Background color on hover */
+}
+
+.profile .icon {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-info {
+    margin-left: 10px;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+nav ul li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000000;
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000000;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background-color: #D3DEEF;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    margin-top: auto;
+    cursor: pointer;
+    width: calc(100% - 40px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    font-weight: bolder;
+    font-size: medium;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.logout-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #c0c8e0;
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.logout-btn:hover {
+    background-color: #D3DEEF;
+    color: rgb(0, 0, 0);
+}
+
+/* CSS for the profile-pic container */
+.profile-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* CSS for the avatar image */
+.avatar {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    margin-bottom: 10px; 
+}
+
+/* CSS for the 'Pilih Foto' button */
+.file-input-label {
+    display: inline-block;
+    padding: 5px 10px; 
+    font-size: 0.9rem; 
+    cursor: pointer;
+    color: white;
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: 4px;
+}
+
+.file-input-label:hover {
+    background-color: #45a049; /* Color on hover */
+}
+
+/* CSS for static text */
+.static-info {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}

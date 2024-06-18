@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelola Profil</title>
-    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="profil-admin.css">
+    <link rel="stylesheet" href="edit_profil.js">
+    <link rel="stylesheet" href="php/edit_profil.php">
 </head>
 <body>
     <div class="container">
@@ -12,20 +14,19 @@
             <div class="logo-container">
                 <img src="asset/logocopy.png" class="logo" alt="AspiRa Logo">
             </div>
-            <a href="profil.html" class="profile-link">
+            <a href="profil-admin.html" class="profile-link">
                 <div class="profile">
                     <img src="asset/profil.png" class="icon" alt="Profile Icon">
                     <div class="user-info">
-                        <p>Nama User</p>
+                        <p>Nama Admin</p>
                         <p>NIP</p>
                     </div>
                 </div>
             </a>
             <nav>
                 <ul>
-                    <li><a href="Beranda.html" class="beranda"><img src="asset/beranda.png" alt="Beranda Icon"> Beranda</a></li>
-                    <li><a href="pengaduan.html" class="buat-pengaduan"><img src="asset/pengaduan.png" alt="Buat Pengaduan Icon"> Buat Pengaduan</a></li>
-                    <li><a href="status.html" class="status-pengaduan"><img src="asset/status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                    <li><a href="beranda-admin.html" class="beranda"><img src="asset/beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="status-admin.html" class="status-pengaduan"><img src="asset/status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
                 </ul>
             </nav>
             <a href="login.html" class="logout-btn"><img src="asset/logout_icon.png" alt="Logout Icon"> Logout</a>
@@ -40,22 +41,18 @@
                         <input type="file" id="upload" style="display:none"/>
                         <label for="upload" class="file-input-label">Pilih Foto</label>
                     </div>
-                    <form class="profile-details" id="profile-form">
+                    <form class="profile-details">
                         <div class="form-group">
                             <label for="nama">Nama</label>
-                            <input type="text" id="nama" name="nama" value="Chyntia">
+                            <input type="text" id="nama" name="nama" value="Bayu">
                         </div>
                         <div class="form-group">
                             <label for="nip">NIP</label>
-                            <input type="text" id="nip" name="nip" value="72018765342" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label>Wilayah</label>
-                            <p id="wilayah" class="static-info">Sario</p>
+                            <input type="text" id="nip" name="nip" value="72023467909">
                         </div>
                         <div class="form-group">
                             <label for="no_hp">No. HP</label>
-                            <input type="text" id="no_hp" name="no_hp" value="082345197654">
+                            <input type="text" id="no_hp" name="no_hp" value="081342876524">
                         </div>
                         <button type="button" class="edit-button" onclick="redirectToProfile()">Selesai</button>
                     </form>
@@ -65,8 +62,8 @@
     </div>
     <script>
         function redirectToProfile() {
-            window.location.href = 'profil.html';
+            window.location.href = 'profil-admin.html';
         }
     </script>
-</body>
-</html>
+    </body>
+    </html>

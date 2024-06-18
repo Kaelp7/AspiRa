@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Profil</title>
+    <link rel="stylesheet" href="profil-admin.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="asset/logocopy.png" class="logo" alt="AspiRa Logo">
+            </div>
+            <a href="profil-admin.html" class="profile-link">
+                <div class="profile">
+                    <img src="asset/profil.png" class="icon" alt="Profile Icon">
+                    <div class="user-info">
+                        <p>Nama Admin</p>
+                        <p>NIP</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="beranda-admin.html" class="beranda"><img src="asset/beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="status-admin.html" class="status-pengaduan"><img src="asset/status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="logout-btn"><img src="asset/logout_icon.png" alt="Logout Icon"> Logout</a>
+        </aside>
+        <div class="content">
+            <h1>Kelola Profil</h1>
+            <div class="profile-section">
+                <h2>Profil</h2>
+                <div class="profile-info">
+                    <div class="profile-pic">
+                        <img src="asset/profil.png" alt="Avatar">
+                    </div>
+                    <div class="profile-details">
+                        <div class="row">
+                            <div class="col1">
+                                <h3>Nama</h3> <span id="nama"></span>
+                                <p>Bayu</p>
+                                <h3>NIP</h3> <span id="nama"></span>
+                                <p>72023467909</p>
+                            </div>
+                            <div class="col2">
+                                <h3>No. HP</h3> <span id="nama"></span>
+                                <p>081342876524</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <button class="edit-button" onclick="goToEditPage()">Ubah</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function goToEditPage() {
+            window.location.href = "edit-profil-admin.html";
+        }
+    </script>
+</body>
+</html>
