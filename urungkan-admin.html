@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspira Status Page</title>
+    <link rel="stylesheet" href="urungkan-admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .editable {
+            display: none;
+            width: 75%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .edit-mode .editable {
+            display: block;
+        }
+        .edit-mode .non-editable {
+            display: none;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 20px;
+        }
+        .status-message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .accept-button, .reject-button, .cancel-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px 0;
+            width: 200px;
+        }
+        .accept-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .accept-button:hover {
+            background-color: #45a049;
+        }
+        .reject-button {
+            background-color: #f44336;
+            color: white;
+        }
+        .reject-button:hover {
+            background-color: #e53935;
+        }
+        .cancel-button {
+            background-color: #ffc107;
+            color: black;
+        }
+        .cancel-button:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="logocopy.png" class="logo" alt="AspiRa Logo">
+            </div>
+            <a href="profil.html" class="profile-link">
+                <div class="profile">
+                    <img src="profil.png" class="icon" alt="Profile Icon">
+                    <div class="user-info">
+                        <p>Nama User</p>
+                        <p>NIP</p>
+                    </div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="beranda-admin.html" class="beranda"><img src="beranda.png" alt="Beranda Icon"> Beranda</a></li>
+                    <li><a href="status-admin.html" class="status-pengaduan active"><img src="status.png" alt="Status Pengaduan Icon"> Status Pengaduan</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="logout-btn"><img src="logout_icon.png" alt="Logout Icon"> Logout</a>
+        </aside>
+        <div class="main-content">
+            <div class="top-box">
+                <button class="back-button" onclick="goBack()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </div>
+            <div class="isi-container">
+                <div class="content">
+                    <div class="detail-container">
+                        <div class="detail-left">
+                            <h3>Pemohon</h3>
+                            <p class="non-editable"><span class="pemohon">Elouis Bridgerton</span></p>
+
+                            <h3>Jenis Pengaduan</h3>
+                            <p class="non-editable">Kebersihan Lingkungan</p>
+
+                            <h3>Tanggal</h3>
+                            <p class="non-editable">01-04-2024</p>
+
+                            <h3>Lokasi</h3>
+                            <p class="non-editable">Sario</p>
+
+                            <h3>Wilayah</h3>
+                            <p class="non-editable">Ranotana</p>
+
+                            <h3>Dokumentasi</h3>
+                            <button class="doc-button">Lihat Dokumentasi</button>
+                        </div>
+                        <div class="detail-right">
+                            <h3>Isi</h3>
+                            <p class="non-editable">Sampah di Kecamatan Ranotana semakin memburuk. Tidak hanya mencemari lingkungan, tetapi juga mengganggu kesehatan masyarakat dan keindahan kota. Perlunya tindakan cepat dan berkelanjutan untuk mengatasi masalah ini</p>
+                            <div class="status-message" id="statusMessage"></div>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button class="accept-button" onclick="acceptAspira()">Terima Aspira</button>
+                        <button class="reject-button" onclick="rejectAspira()">Tolak Aspira</button>
+                        <button class="cancel-button" onclick="cancelAction()" style="display: none;">Urungkan</button>
+                    </div>
+                    <div class="status-message" id="statusMessage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            console.log('Button clicked');
+            window.location.href = 'status-admin.html';
+        }
+
+        function acceptAspira() {
+            document.getElementById('statusMessage').innerText = 'Diterima';
+            document.getElementById('statusMessage').classList.add('show', 'accepted'); // Tambah class 'accepted'
+            document.querySelector('.accept-button').style.display = 'none';
+            document.querySelector('.reject-button').style.display = 'none';
+            document.querySelector('.cancel-button').style.display = 'block';
+        }
+        
+
+        function rejectAspira() {
+            document.getElementById('statusMessage').innerText = 'Ditolak';
+            document.getElementById('statusMessage').classList.add('show');
+            document.querySelector('.accept-button').style.display = 'none';
+            document.querySelector('.reject-button').style.display = 'none';
+            document.querySelector('.cancel-button').style.display = 'block';
+        }
+
+        function cancelAction() {
+            document.getElementById('statusMessage').innerText = '';
+            document.querySelector('.accept-button').style.display = 'block';
+            document.querySelector('.reject-button').style.display = 'block';
+            document.querySelector('.cancel-button').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
