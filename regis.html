@@ -13,8 +13,8 @@
       <h1>Buat Akun</h1>
       <form id="registrationForm">
         <div class="input-container">
-          <label for="nama">Nama</label>
-          <input type="text" id="nama" placeholder="Masukkan Nama Lengkap">
+          <label for="username">Nama</label>
+          <input type="text" id="username" placeholder="Masukkan Nama Lengkap">
         </div>
         <div class="input-container">
           <label for="nip">NIP</label>
@@ -40,7 +40,25 @@
   <script>
     document.getElementById('registrationForm').addEventListener('submit', function(event) {
       event.preventDefault();
-      window.location.href = 'login.html';
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      fetch('http://localhost:3001/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      })
+      .then(response => response.text())
+      .then(data => {
+        if (data === 'User registered successfully') {
+          window.location.href = 'login.html';
+        } else {
+          alert(data);
+        }
+      });
     });
   </script>
 </body>
