@@ -13,51 +13,110 @@
       <h1>Buat Akun</h1>
       <form id="registrationForm">
         <div class="input-container">
-          <label for="username">Nama</label>
-          <input type="text" id="username" placeholder="Masukkan Nama Lengkap">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" placeholder="Masukkan Nama Lengkap">
+          <small id="nama-error" class="error-message"></small>
         </div>
         <div class="input-container">
           <label for="nip">NIP</label>
           <input type="text" id="nip" placeholder="Masukkan NIP">
+          <small id="nip-error" class="error-message"></small>
         </div>
         <div class="input-container">
           <label for="wilayah">Wilayah</label>
           <input type="text" id="wilayah" placeholder="Masukkan Wilayah">
+          <small id="wilayah-error" class="error-message"></small>
         </div>
         <div class="input-container">
-          <label for="hp">No HP</label>
-          <input type="text" id="hp" placeholder="Masukkan No HP">
+          <label for="no_hp">No HP</label>
+          <input type="tel" id="no_hp" placeholder="Masukkan No HP">
+          <small id="no_hp-error" class="error-message"></small>
         </div>
         <div class="input-container">
           <label for="password">Password</label>
           <input type="password" id="password" placeholder="Masukkan Password">
+          <small id="password-error" class="error-message"></small>
+        </div>
+        <div class="input-container">
+          <label for="confirm-password">Konfirmasi Password</label>
+          <input type="password" id="confirm-password" placeholder="Konfirmasi Password">
+          <small id="confirm-password-error" class="error-message"></small>
         </div>
         <button type="submit">Daftar</button>
       </form>
       <p>Sudah punya akun? <a href="login.html">Login</a></p>
+      <small id="general-error" class="error-message"></small>
     </div>
   </div>
   <script>
     document.getElementById('registrationForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
-      const username = document.getElementById('username').value;
+      const nama = document.getElementById('nama').value;
+      const nip = document.getElementById('nip').value;
+      const wilayah = document.getElementById('wilayah').value;
+      const no_hp = document.getElementById('no_hp').value;
       const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      let isValid = true;
+
+      if (nama === '') {
+        document.getElementById('nama-error').textContent = 'Nama tidak boleh kosong.';
+        isValid = false;
+      }
+
+      if (nip === '') {
+        document.getElementById('nip-error').textContent = 'NIP tidak boleh kosong.';
+        isValid = false;
+      }
+
+      if (wilayah === '') {
+        document.getElementById('wilayah-error').textContent = 'Wilayah tidak boleh kosong.';
+        isValid = false;
+      }
+
+      if (no_hp === '') {
+        document.getElementById('no_hp-error').textContent = 'No HP tidak boleh kosong.';
+        isValid = false;
+      }
+
+      if (password === '') {
+        document.getElementById('password-error').textContent = 'Password tidak boleh kosong.';
+        isValid = false;
+      }
+
+      if (confirmPassword === '') {
+        document.getElementById('confirm-password-error').textContent = 'Konfirmasi password tidak boleh kosong.';
+        isValid = false;
+      }
+
+      if (password !== confirmPassword) {
+       document.getElementById('confirm-password-error').textContent = 'Passwords do not match.';
+        isValid = false;
+      }
+
+      if (!isValid) {
+        return;
+      }
 
       fetch('http://localhost:3001/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ nama, nip, wilayah, no_hp, password })
       })
-      .then(response => response.text())
-      .then(data => {
-        if (data === 'User registered successfully') {
+     .then(response => response.json())
+     .then(data => {
+        if (data.message === 'User registered successfully') {
           window.location.href = 'login.html';
         } else {
-          alert(data);
+          document.getElementById('general-error').textContent = data.message;
         }
+      })
+     .catch(error => {
+        document.getElementById('general-error').textContent = 'An error occurred. Please try again.';
       });
     });
   </script>
